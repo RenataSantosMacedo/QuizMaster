@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Nível Fácil</title>
+<link rel="stylesheet" type="text/css" href="style_easy.css">
+</head>
+<body>
+<div id="background-container">
+    <div class="container">
+        <h1>Quiz - Nível Fácil</h1>
+        <div class="question" id="easy-question"></div>
+        <div class="options" id="easy-options"></div>
+        <div class="hint" id="easy-hint"></div>
+        <div class="feedback" id="easy-feedback"></div>
+        <div class="score" id="easy-score">Pontuação: <span id="easy-score-value">0</span></div>
+        <div class="timer" id="easy-timer">Tempo Restante: <span id="easy-timer-value">10</span> segundos</div>
+        <button class="hint-button" onclick="easyShowHint()">Dica</button>
+        <button class="next-button" id="easy-next-button">Próxima Pergunta</button>
+        <button class="restart-button" id="easy-restart-button">Recomeçar</button>
+    </div>
+</div>
+
+<script src="quiz_easy_script.js"></script>
+</body>
+</html>
