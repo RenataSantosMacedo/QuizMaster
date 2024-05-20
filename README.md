@@ -14,7 +14,7 @@ Sistema web de quiz com seleção de níveis de dificuldade, feedback imediato, 
 - Lucas Henrique Santos Figueiredo (RA: 32228309)
 
 # Link da hospedagem
-https://quizmaster123.000webhostapp.com/
+https://quizmaster123.000webhostapp.com/ <br/>
 https://quizmaster123.netlify.app/
 
 
