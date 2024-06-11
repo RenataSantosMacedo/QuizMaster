@@ -98,7 +98,16 @@ function easyCheckAnswer(selectedOption) {
         easyFeedbackElement.textContent = "Resposta incorreta! A resposta correta é: " + currentQuizData.answer;
     }
     easyScoreValueElement.textContent = easyScore;
+    easyDisableOptions();
     easyShowNextButton();
+}
+
+function easyDisableOptions() {
+    const buttons = easyOptionsElement.querySelectorAll("button")
+    buttons.forEach(button => {
+        button.disabled = true;//correção do looping de pontuação 
+
+    });
 }
 
 function easyStartTimer() {
@@ -110,6 +119,7 @@ function easyStartTimer() {
         if (timeLeft <= 0) {
             clearInterval(easyTimerInterval);
             easyFeedbackElement.textContent = "Tempo esgotado!";
+            easyDisableOptions();
             easyShowNextButton();
         }
     }, 1000);
@@ -130,6 +140,8 @@ function easyShowNextQuestion() {
         easyDisplayQuestion();
         easyStartTimer();
         easyNextButton.style.display = "none";
+        easyFeedbackElement.textContent = "";
+        easyHintElement.textContent = "";
     } else {
         clearInterval(easyTimerInterval);
         easyFeedbackElement.textContent = "Quiz finalizado!";
@@ -139,12 +151,16 @@ function easyShowNextQuestion() {
         easyRestartButton.style.display = "inline-block";
     }
 }
-
+//Limpeza do feedback e das dicas
 function easyStartQuiz() {
     easyCurrentQuestion = 0;
     easyScore = 0;
+    easyScoreValueElement.textContent = easyScore; //atualiza a pontuação
+    easyFeedbackElement.textContente = "", 
+    easyHintElement,textContent = "";
     easyDisplayQuestion();
     easyStartTimer();
+    easyRestartButton.style.display = "none";
     easyRestartButton.style.display = "none";
 }
 
