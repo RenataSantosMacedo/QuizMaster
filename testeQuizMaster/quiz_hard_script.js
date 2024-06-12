@@ -98,9 +98,17 @@ function hardCheckAnswer(selectedOption) {
         hardFeedbackElement.textContent = "Resposta incorreta! A resposta correta é: " + currentQuizData.answer;
     }
     hardScoreValueElement.textContent = hardScore;
+    hardDisableOptions();
     hardShowNextButton();
 }
 
+function hardDisableOptions() {
+    const buttons = hardOptionsElement.querySelectorAll("button")
+    buttons.forEach(button => {
+        button.disabled = true;//correção do looping de pontuação 
+
+    });
+}
 function hardStartTimer() {
     let timeLeft = hardTimerValue;
     hardTimerValueElement.textContent = "Tempo restante: " + timeLeft + "s";
@@ -110,6 +118,7 @@ function hardStartTimer() {
         if (timeLeft <= 0) {
             clearInterval(hardTimerInterval);
             hardFeedbackElement.textContent = "Tempo esgotado!";
+            hardDisableOptions();
             hardShowNextButton();
         }
     }, 1000);
@@ -118,7 +127,10 @@ function hardStartTimer() {
 function hardShowHint() {
     const currentQuizData = hardQuestions[hardCurrentQuestion];
     hardHintElement.textContent = "Dica: " + currentQuizData.hint;
+    hardHintElement.style.color = "white";
+    hardHintElement.style.fontSize = "16px";
 }
+
 
 function hardShowNextButton() {
     hardNextButton.style.display = "inline-block";
@@ -130,6 +142,8 @@ function hardShowNextQuestion() {
         hardDisplayQuestion();
         hardStartTimer();
         hardNextButton.style.display = "none";
+        hardFeedbackElement.textContent = "";
+        hardHintElement.textContent = "";
     } else {
         clearInterval(hardTimerInterval);
         hardFeedbackElement.textContent = "Quiz finalizado!";
@@ -143,6 +157,9 @@ function hardShowNextQuestion() {
 function hardStartQuiz() {
     hardCurrentQuestion = 0;
     hardScore = 0;
+    hardScoreValueElement.textContent = hardScore; //atualiza a pontuação
+    hardFeedbackElement.textContente = "", 
+    hardHintElement,textContent = "";
     hardDisplayQuestion();
     hardStartTimer();
     hardRestartButton.style.display = "none";

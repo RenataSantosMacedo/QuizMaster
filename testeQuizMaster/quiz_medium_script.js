@@ -98,7 +98,16 @@ function mediumCheckAnswer(selectedOption) {
         mediumFeedbackElement.textContent = "Resposta incorreta! A resposta correta é: " + currentQuizData.answer;
     }
     mediumScoreValueElement.textContent = mediumScore;
+    mediumDisableOptions();
     mediumShowNextButton();
+}
+
+function mediumDisableOptions() {
+    const buttons = mediumOptionsElement.querySelectorAll("button")
+    buttons.forEach(button => {
+        button.disabled = true;//correção do looping de pontuação 
+
+    });
 }
 
 function mediumStartTimer() {
@@ -110,6 +119,7 @@ function mediumStartTimer() {
         if (timeLeft <= 0) {
             clearInterval(mediumTimerInterval);
             mediumFeedbackElement.textContent = "Tempo esgotado!";
+            mediumDisableOptions();
             mediumShowNextButton();
         }
     }, 1000);
@@ -132,6 +142,8 @@ function mediumShowNextQuestion() {
         mediumDisplayQuestion();
         mediumStartTimer();
         mediumNextButton.style.display = "none";
+        mediumFeedbackElement.textContent = "";
+        mediumHintElement.textContent = "";
     } else {
         clearInterval(mediumTimerInterval);
         mediumFeedbackElement.textContent = "Quiz finalizado!";
@@ -145,6 +157,9 @@ function mediumShowNextQuestion() {
 function mediumStartQuiz() {
     mediumCurrentQuestion = 0;
     mediumScore = 0;
+    mediumScoreValueElement.textContent = mediumScore; //atualiza a pontuação
+    mediumFeedbackElement.textContente = "", 
+    mediumHintElement,textContent = "";
     mediumDisplayQuestion();
     mediumStartTimer();
     mediumRestartButton.style.display = "none";
