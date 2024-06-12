@@ -128,7 +128,10 @@ function easyStartTimer() {
 function easyShowHint() {
     const currentQuizData = easyQuestions[easyCurrentQuestion];
     easyHintElement.textContent = "Dica: " + currentQuizData.hint;
+    easyHintElement.style.color = "white";
+    easyHintElement.style.fontSize = "16px";
 }
+
 
 function easyShowNextButton() {
     easyNextButton.style.display = "inline-block";
@@ -160,7 +163,6 @@ function easyStartQuiz() {
     easyHintElement,textContent = "";
     easyDisplayQuestion();
     easyStartTimer();
-    easyRestartButton.style.display = "none";
     easyRestartButton.style.display = "none";
 }
 
