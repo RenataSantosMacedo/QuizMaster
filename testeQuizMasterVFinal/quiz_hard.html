@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Nível Difícil</title>
+<link rel="stylesheet" type="text/css" href="style_hard.css">
+</head>
+<body>
+<div id="background-container">
+    <div class="container">
+        <h1>Quiz - Nível Difícil</h1>
+        <div class="question" id="hard-question"></div>
+        <div class="options" id="hard-options"></div>
+        <div class="hint" id="hard-hint"></div>
+        <div class="feedback" id="hard-feedback"></div>
+        <div class="score" id="hard-score">Pontuação: <span id="hard-score-value">0</span></div>
+        <div class="timer" id="hard-timer">Tempo Restante: <span id="hard-timer-value">30</span> segundos</div>
+        <button class="hint-button" onclick="hardShowHint()">Dica</button>
+        <button class="next-button" id="hard-next-button">Próxima Pergunta</button>
+        <button class="restart-button" id="hard-restart-button">Recomeçar</button>
+    </div>
+</div>
+
+<script src="quiz_hard_script.js"></script>
+</body>
+</html>

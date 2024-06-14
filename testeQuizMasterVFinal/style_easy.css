@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('./imagens/telaPerguntas.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 28px;
+}
+
+.question {
+    margin-bottom: 30px;
+    color: white;
+    font-size: 25px;
+}
+
+.options button {
+    display: block;
+    width: 100%;
+    padding: 20px 35px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8a2be2;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.options button:hover {
+    background-color: #6a1e9c;
+}
+
+.feedback {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.score, .timer {
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.timer {
+    font-style: italic;
+}
+
+.hint-button {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    padding: 15px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8a2be2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hint-button:hover {
+    background-color: #6a1e9c;
+}
+
+.next-button, .restart-button {
+    display: none;
+    padding: 15px 25px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8a2be2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.next-button:hover, .restart-button:hover {
+    background-color: #6a1e9c;
+}

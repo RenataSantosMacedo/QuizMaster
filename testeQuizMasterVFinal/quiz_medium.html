@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Nível Médio</title>
+<link rel="stylesheet" type="text/css" href="style_medium.css">
+</head>
+<body>
+<div id="background-container">
+    <div class="container">
+        <h1>Quiz - Nível Médio</h1>
+        <div class="question" id="medium-question"></div>
+        <div class="options" id="medium-options"></div>
+        <div class="hint" id="medium-hint"></div>
+        <div class="feedback" id="medium-feedback"></div>
+        <div class="score" id="medium-score">Pontuação: <span id="medium-score-value">0</span></div>
+        <div class="timer" id="medium-timer">Tempo Restante: <span id="medium-timer-value">20</span> segundos</div>
+        <button class="hint-button" onclick="mediumShowHint()">Dica</button>
+        <button class="next-button" id="medium-next-button">Próxima Pergunta</button>
+        <button class="restart-button" id="medium-restart-button">Recomeçar</button>
+    </div>
+</div>
+
+<script src="quiz_medium_script.js"></script>
+</body>
+</html>

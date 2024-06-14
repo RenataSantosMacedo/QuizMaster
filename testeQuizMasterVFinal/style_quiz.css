@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('./imagens/SelNivel.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.difficulty button {
+    margin: 25vh 2vh 2vh 2vh;
+    padding: 15px 25px;
+    font-size: 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #8a2be2; /* cor lilás */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.difficulty button:hover {
+    background-color: #6a1e9c; /* cor lilás mais escura no hover */
+}

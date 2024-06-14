@@ -1,0 +1,42 @@
+/* Estilos CSS */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#background-container {
+    background-image: url('./imagens/telaInicial.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Botão de jogar */
+.play-button {
+    margin-top: 40vh;
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #8a2be2; /* cor lilás */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.play-button:hover {
+    background-color: #6a1e9c; /* cor lilás mais escura no hover */
+}
+
+.hint{
+    color: white;
+}
+
